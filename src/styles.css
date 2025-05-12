@@ -1,3 +1,13 @@
+:root {
+    --text-colour: #2c3106;
+    --background-colour: #8adefc;
+}
+
 * {
     padding: 8px;
+}
+
+.page-title {
+    color: var(--text-colour);
+    background-color: var(--background-colour);
 }
