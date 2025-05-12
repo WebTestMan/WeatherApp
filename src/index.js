@@ -1,5 +1,13 @@
 import "./styles.css";
+import getWeatherData from "./getWeatherData";
 
-const message = 'Hello World!'
+const message = "Hello World!";
 
-console.log(message)
+// search box, calls getWeather Data
+
+const weatherSearchBox = document.getElementById("weatherInput");
+weatherSearchBox.addEventListener("click", () => {
+  getWeatherData;
+});
+
+console.log(message);
