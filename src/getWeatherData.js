@@ -1,17 +1,30 @@
 const getWeatherData = (function () {
-  // hit api
-  // extract data
-  // return different bits of data
   const weatherRod = "WKCG34RNMQGB6SNVKC9BQEB9M";
+  // const url =
+  // "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/slough/today?unitGroup=uk&key=WKCG34RNMQGB6SNVKC9BQEB9M&contentType=json";
 
-  const getWeather = (location = "London") => {
-    fetch(
-      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/today?unitGroup=uk&key=${weatherRod}`
-    ).then((response) => {
-      console.log(response.json());
-    });
+  const getWeather = async (location = "London") => {
+    const response = await fetch(
+      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/today?unitGroup=uk&key=${weatherRod}&contentType=json`
+    );
+    const weatherData = await response.json();
+    const weatherInfo = weatherData.days[0];
+    return weatherInfo;
   };
-  return { getWeather };
+
+  const getCurrentTemp = (weatherData) => {
+    const currentTemp = weatherData.temp;
+    console.log(currentTemp);
+    return currentTemp;
+  };
+
+  const getCurrentConditions = (weatherData) => {
+    const currentConditions = weatherData.conditions;
+    console.log(currentConditions);
+    return currentConditions;
+  };
+
+  return { getWeather, getCurrentTemp, getCurrentConditions };
 })();
 
 export default getWeatherData;
