@@ -10,12 +10,9 @@ const getGiphy = (function () {
         return response.json();
       })
       .then(function (response) {
-        const imgSrc = response.data.images.original.url;
-        console.log(imgSrc);
-        return imgSrc;
+        return response.data.images.original.url;
       });
 
-    console.log("Gif Data " + gifData);
     return gifData;
   };
 
