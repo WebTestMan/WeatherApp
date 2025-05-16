@@ -7,6 +7,11 @@
     padding: 8px;
 }
 
+#under-c{
+    background-color: yellow;
+    color: black;
+    text-align: center;
+}
 .page-title {
     color: var(--text-colour);
     background-color: var(--background-colour);
