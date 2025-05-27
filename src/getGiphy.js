@@ -1,5 +1,5 @@
 const getGiphy = (function () {
-  const gifRod = secrets.GIF_ROD; //"mOlnNSnubcajFdrUrjEEV6GWdSrqIJ0f&s";
+  const gifRod = secrets.GIF_ROD;
 
   const getGif = async (gifToSearchFor) => {
     const gifData = await fetch(

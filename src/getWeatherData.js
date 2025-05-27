@@ -1,7 +1,5 @@
 const getWeatherData = (function () {
-  const weatherRod = secrets.WEATHER_ROD; //"WKCG34RNMQGB6SNVKC9BQEB9M";
-  // const url =
-  // "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/slough/today?unitGroup=uk&key=WKCG34RNMQGB6SNVKC9BQEB9M&contentType=json";
+  const weatherRod = secrets.WEATHER_ROD;
 
   const getWeather = async (location = "London") => {
     const response = await fetch(
